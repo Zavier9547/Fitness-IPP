@@ -18,6 +18,8 @@
 		182647781CF42BEA00BE9C95 /* FitnessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182647771CF42BEA00BE9C95 /* FitnessAppTests.swift */; };
 		182647831CF42BEA00BE9C95 /* FitnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182647821CF42BEA00BE9C95 /* FitnessAppUITests.swift */; };
 		1869143B1D04572A000CE702 /* strong-man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1869143A1D04572A000CE702 /* strong-man.jpg */; };
+		188C59EF1D06A949006D2825 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188C59E81D06A8E7006D2825 /* Charts.framework */; };
+		188C59F01D06A949006D2825 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 188C59E81D06A8E7006D2825 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,56 @@
 			remoteGlobalIDString = 1826475B1CF42BE900BE9C95;
 			remoteInfo = FitnessApp;
 		};
+		188C59E71D06A8E7006D2825 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 188C59E01D06A8E7006D2825 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		188C59E91D06A8E7006D2825 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 188C59E01D06A8E7006D2825 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		188C59EB1D06A8E7006D2825 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 188C59E01D06A8E7006D2825 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
+			remoteInfo = "Charts-OSX";
+		};
+		188C59ED1D06A8E7006D2825 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 188C59E01D06A8E7006D2825 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
+		188C59F11D06A949006D2825 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 188C59E01D06A8E7006D2825 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		188C59F31D06A949006D2825 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				188C59F01D06A949006D2825 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		181140FC1D043D5000F2A900 /* SportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +106,7 @@
 		182647821CF42BEA00BE9C95 /* FitnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppUITests.swift; sourceTree = "<group>"; };
 		182647841CF42BEA00BE9C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1869143A1D04572A000CE702 /* strong-man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "strong-man.jpg"; path = "reg/strong-man.jpg"; sourceTree = SOURCE_ROOT; };
+		188C59E01D06A8E7006D2825 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188C59EF1D06A949006D2825 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +150,7 @@
 				182647761CF42BEA00BE9C95 /* FitnessAppTests */,
 				182647811CF42BEA00BE9C95 /* FitnessAppUITests */,
 				1826475D1CF42BE900BE9C95 /* Products */,
+				188C59E01D06A8E7006D2825 /* Charts.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +199,17 @@
 			path = FitnessAppUITests;
 			sourceTree = "<group>";
 		};
+		188C59E11D06A8E7006D2825 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				188C59E81D06A8E7006D2825 /* Charts.framework */,
+				188C59EA1D06A8E7006D2825 /* Charts.framework */,
+				188C59EC1D06A8E7006D2825 /* Charts.framework */,
+				188C59EE1D06A8E7006D2825 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,10 +220,12 @@
 				182647581CF42BE900BE9C95 /* Sources */,
 				182647591CF42BE900BE9C95 /* Frameworks */,
 				1826475A1CF42BE900BE9C95 /* Resources */,
+				188C59F31D06A949006D2825 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				188C59F21D06A949006D2825 /* PBXTargetDependency */,
 			);
 			name = FitnessApp;
 			productName = FitnessApp;
@@ -236,6 +303,12 @@
 			mainGroup = 182647531CF42BE900BE9C95;
 			productRefGroup = 1826475D1CF42BE900BE9C95 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 188C59E11D06A8E7006D2825 /* Products */;
+					ProjectRef = 188C59E01D06A8E7006D2825 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1826475B1CF42BE900BE9C95 /* FitnessApp */,
@@ -244,6 +317,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		188C59E81D06A8E7006D2825 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 188C59E71D06A8E7006D2825 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		188C59EA1D06A8E7006D2825 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 188C59E91D06A8E7006D2825 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		188C59EC1D06A8E7006D2825 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 188C59EB1D06A8E7006D2825 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		188C59EE1D06A8E7006D2825 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 188C59ED1D06A8E7006D2825 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1826475A1CF42BE900BE9C95 /* Resources */ = {
@@ -314,6 +418,11 @@
 			isa = PBXTargetDependency;
 			target = 1826475B1CF42BE900BE9C95 /* FitnessApp */;
 			targetProxy = 1826477F1CF42BEA00BE9C95 /* PBXContainerItemProxy */;
+		};
+		188C59F21D06A949006D2825 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = 188C59F11D06A949006D2825 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -428,6 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FitnessApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nju.FitnessApp;
@@ -442,6 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FitnessApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nju.FitnessApp;

@@ -34,7 +34,19 @@
                     <view key="view" contentMode="scaleToFill" id="84i-2T-xqv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zhN-zk-OFD" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zhN-zk-OFD" secondAttribute="trailing" id="Ax7-C7-Xql"/>
+                            <constraint firstItem="zhN-zk-OFD" firstAttribute="leading" secondItem="84i-2T-xqv" secondAttribute="leadingMargin" id="K6a-Hk-CkW"/>
+                            <constraint firstItem="zhN-zk-OFD" firstAttribute="top" secondItem="Ybk-OP-Jmx" secondAttribute="bottom" id="fZz-1E-0Qd"/>
+                            <constraint firstItem="S5W-PB-vqe" firstAttribute="top" secondItem="zhN-zk-OFD" secondAttribute="bottom" id="z54-FW-mEu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="记录" id="arh-AW-0co">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rak-CL-fvX">
@@ -43,6 +55,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="barChartView" destination="zhN-zk-OFD" id="J8x-rV-4TW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWa-tB-Bwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
