@@ -142,7 +142,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyT-gE-JdP">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyT-gE-JdP">
                                 <rect key="frame" x="0.0" y="84" width="600" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="训练计划" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLZ-WX-Mib">
@@ -181,6 +181,12 @@
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iN-p0-IWS">
+                                        <rect key="frame" x="398" y="10" width="22" height="22"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -193,6 +199,7 @@
                                     <constraint firstItem="qPj-Q7-50G" firstAttribute="bottom" secondItem="JLZ-WX-Mib" secondAttribute="bottom" id="cY2-91-xN7"/>
                                     <constraint firstItem="GTC-ZI-uYL" firstAttribute="centerX" secondItem="tZB-Gp-dp2" secondAttribute="centerX" constant="20" id="fv7-uF-aCK"/>
                                     <constraint firstItem="tZB-Gp-dp2" firstAttribute="centerX" secondItem="WBH-t9-wxc" secondAttribute="centerX" constant="20" id="hQ5-wZ-q8e"/>
+                                    <constraint firstItem="8iN-p0-IWS" firstAttribute="leading" secondItem="GTC-ZI-uYL" secondAttribute="trailing" constant="30" id="qYT-0w-Wgq"/>
                                     <constraint firstItem="JLZ-WX-Mib" firstAttribute="trailing" secondItem="Y0u-Y7-qhI" secondAttribute="leading" constant="-10" id="ufe-9Y-n6i"/>
                                 </constraints>
                             </view>
@@ -235,17 +242,28 @@
                                     <constraint firstItem="MMr-5h-4se" firstAttribute="bottom" secondItem="f0I-03-huC" secondAttribute="bottom" constant="-20" id="y1r-Ri-J86"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CK6-3K-Wck">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CK6-3K-Wck">
                                 <rect key="frame" x="0.0" y="288" width="600" height="292"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9j-ZM-9OB">
-                                        <rect key="frame" x="259" y="241" width="82" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9j-ZM-9OB">
+                                        <rect key="frame" x="105" y="236" width="105" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="手动完成"/>
+                                        <state key="normal" title="手动完成此组"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IO0-bi-8OK">
+                                        <rect key="frame" x="371" y="236" width="134" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="手动完成全部"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="IO0-bi-8OK" secondAttribute="bottom" constant="30" id="A8D-Cp-9Cz"/>
+                                    <constraint firstItem="U9j-ZM-9OB" firstAttribute="leading" secondItem="CK6-3K-Wck" secondAttribute="leading" constant="20" id="aSW-TJ-cJW"/>
+                                    <constraint firstAttribute="bottom" secondItem="U9j-ZM-9OB" secondAttribute="bottom" constant="30" id="ihv-Y6-dGa"/>
+                                    <constraint firstAttribute="trailing" secondItem="IO0-bi-8OK" secondAttribute="trailing" constant="20" id="ld2-dx-dLe"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bw7-qH-Wie" appends="YES" id="Dfh-FF-emy"/>
                                 </connections>
@@ -253,10 +271,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CK6-3K-Wck" firstAttribute="top" secondItem="t1T-PL-r5H" secondAttribute="bottom" constant="20" id="11a-Kz-H66"/>
                             <constraint firstItem="Y0u-Y7-qhI" firstAttribute="centerX" secondItem="WXF-k3-9UG" secondAttribute="centerX" id="43x-RL-urG"/>
-                            <constraint firstItem="U9j-ZM-9OB" firstAttribute="centerX" secondItem="WXF-k3-9UG" secondAttribute="centerX" id="OQE-I0-BmX"/>
+                            <constraint firstItem="t1T-PL-r5H" firstAttribute="top" secondItem="oyT-gE-JdP" secondAttribute="bottom" constant="20" id="KsW-jj-FW9"/>
+                            <constraint firstItem="t1T-PL-r5H" firstAttribute="width" secondItem="WXF-k3-9UG" secondAttribute="width" id="LS2-n2-rjX"/>
+                            <constraint firstItem="pnP-uw-yTr" firstAttribute="top" secondItem="CK6-3K-Wck" secondAttribute="bottom" constant="20" id="TG5-hL-qB9"/>
                             <constraint firstItem="f0I-03-huC" firstAttribute="centerX" secondItem="WXF-k3-9UG" secondAttribute="centerX" id="WMW-Mg-4Y6"/>
+                            <constraint firstItem="oyT-gE-JdP" firstAttribute="width" secondItem="WXF-k3-9UG" secondAttribute="width" id="WYD-YM-Ou3"/>
+                            <constraint firstItem="CK6-3K-Wck" firstAttribute="centerX" secondItem="WXF-k3-9UG" secondAttribute="centerX" id="aSr-Ak-BBD"/>
+                            <constraint firstItem="t1T-PL-r5H" firstAttribute="centerX" secondItem="WXF-k3-9UG" secondAttribute="centerX" id="cya-UH-CLL"/>
                             <constraint firstItem="eMU-yo-uaD" firstAttribute="leading" secondItem="WXF-k3-9UG" secondAttribute="leadingMargin" constant="10" id="dRw-cY-Cia"/>
+                            <constraint firstItem="oyT-gE-JdP" firstAttribute="centerX" secondItem="WXF-k3-9UG" secondAttribute="centerX" id="iEr-lg-E20"/>
+                            <constraint firstItem="CK6-3K-Wck" firstAttribute="width" secondItem="WXF-k3-9UG" secondAttribute="width" id="uZj-xd-JLa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="训练" id="NBU-Vw-9sE">

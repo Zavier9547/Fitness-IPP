@@ -31,7 +31,20 @@ class SportViewController: UIViewController {
 
     @IBAction func CountTap(sender: UITapGestureRecognizer) {
         leftNum.text=String((leftNum.text! as NSString).intValue-1)
+        showAlert(rateOfSchedule: 2)
     }
+    
+    func showAlert(rateOfSchedule rate: Int){
+        
+        let alertVC = UIAlertController(title: "完成情况", message: "第\(rate)组计划已经完成，休息一下吧！", preferredStyle: UIAlertControllerStyle.Alert )
+        
+        let acSure = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default , handler:nil)
+    
+        alertVC.addAction(acSure)
+    
+        self.presentViewController(alertVC, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
