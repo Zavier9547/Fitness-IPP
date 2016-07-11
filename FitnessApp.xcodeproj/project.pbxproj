@@ -20,6 +20,7 @@
 		1869143B1D04572A000CE702 /* strong-man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1869143A1D04572A000CE702 /* strong-man.jpg */; };
 		188C59EF1D06A949006D2825 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188C59E81D06A8E7006D2825 /* Charts.framework */; };
 		188C59F01D06A949006D2825 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 188C59E81D06A8E7006D2825 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18C598F71D33D50800603B91 /* trainingVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C598F61D33D50800603B91 /* trainingVolume.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		182647841CF42BEA00BE9C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1869143A1D04572A000CE702 /* strong-man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "strong-man.jpg"; path = "reg/strong-man.jpg"; sourceTree = SOURCE_ROOT; };
 		188C59E01D06A8E7006D2825 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		18C598F61D33D50800603B91 /* trainingVolume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trainingVolume.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				1826476B1CF42BEA00BE9C95 /* LaunchScreen.storyboard */,
 				1826476E1CF42BEA00BE9C95 /* Info.plist */,
 				182647661CF42BEA00BE9C95 /* FitnessApp.xcdatamodeld */,
+				18C598F61D33D50800603B91 /* trainingVolume.swift */,
 			);
 			path = FitnessApp;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				182647621CF42BEA00BE9C95 /* ViewController.swift in Sources */,
 				182647681CF42BEA00BE9C95 /* FitnessApp.xcdatamodeld in Sources */,
 				181140FF1D043D8700F2A900 /* RecordViewController.swift in Sources */,
+				18C598F71D33D50800603B91 /* trainingVolume.swift in Sources */,
 				182647601CF42BEA00BE9C95 /* AppDelegate.swift in Sources */,
 				181140FD1D043D5000F2A900 /* SportViewController.swift in Sources */,
 			);
