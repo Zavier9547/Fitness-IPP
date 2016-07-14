@@ -92,7 +92,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="记录"/>
                                 <connections>
-                                    <segue destination="BvX-6P-YNB" kind="show" id="1df-gC-8Nn"/>
+                                    <segue destination="BvX-6P-YNB" kind="show" identifier="record" id="Ov4-k0-CNk"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="strong-man.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="S4l-35-Jko">
@@ -104,7 +104,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="训练"/>
                                 <connections>
-                                    <segue destination="MMs-pg-Ox3" kind="show" id="3m9-Id-aPn"/>
+                                    <segue destination="MMs-pg-Ox3" kind="show" identifier="train" id="3m9-Id-aPn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,6 +125,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g4l-C4-iRg"/>
+                    <connections>
+                        <outlet property="record" destination="pPZ-Ua-5mf" id="ykB-dI-cj9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,14 +264,22 @@
                                             <action selector="finishAll:" destination="MMs-pg-Ox3" eventType="touchUpInside" id="J2Z-2U-hSx"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="点击save保存一下啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpE-SH-nq4">
+                                        <rect key="frame" x="194" y="80" width="212" height="73"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="IO0-bi-8OK" secondAttribute="bottom" constant="30" id="A8D-Cp-9Cz"/>
+                                    <constraint firstItem="hpE-SH-nq4" firstAttribute="centerX" secondItem="CK6-3K-Wck" secondAttribute="centerX" id="Qzg-Zl-1VV"/>
                                     <constraint firstItem="U9j-ZM-9OB" firstAttribute="leading" secondItem="CK6-3K-Wck" secondAttribute="leading" constant="20" id="aSW-TJ-cJW"/>
                                     <constraint firstAttribute="bottom" secondItem="U9j-ZM-9OB" secondAttribute="bottom" constant="30" id="ihv-Y6-dGa"/>
                                     <constraint firstAttribute="trailing" secondItem="IO0-bi-8OK" secondAttribute="trailing" constant="20" id="ld2-dx-dLe"/>
+                                    <constraint firstItem="hpE-SH-nq4" firstAttribute="centerY" secondItem="CK6-3K-Wck" secondAttribute="centerY" id="obX-93-ydc"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bw7-qH-Wie" appends="YES" id="Dfh-FF-emy"/>
@@ -300,6 +311,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="4gx-5r-vzI">
                             <connections>
                                 <action selector="save:" destination="MMs-pg-Ox3" id="zq4-a4-Jdo"/>
+                                <segue destination="MEu-GD-GJ7" kind="unwind" unwindAction="unwindToMain:" id="pBT-nE-vvz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -311,9 +323,13 @@
                         <outlet property="plan_label3" destination="WBH-t9-wxc" id="aPA-vT-Wri"/>
                         <outlet property="plan_label4" destination="tZB-Gp-dp2" id="RTa-gn-eG6"/>
                         <outlet property="plan_label5" destination="GTC-ZI-uYL" id="z1r-Ad-B6d"/>
+                        <outlet property="saveButton" destination="4gx-5r-vzI" id="Gju-Pn-axc"/>
+                        <outlet property="savelabel" destination="hpE-SH-nq4" id="8bg-GC-0Uu"/>
+                        <outlet property="tap" destination="bw7-qH-Wie" id="rKr-vd-mB9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vot-Cm-fSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MEu-GD-GJ7" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="bw7-qH-Wie">
                     <connections>
                         <action selector="CountTap:" destination="MMs-pg-Ox3" id="vyR-oa-zVg"/>

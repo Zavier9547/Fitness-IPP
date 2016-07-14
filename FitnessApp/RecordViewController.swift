@@ -15,6 +15,11 @@ class RecordViewController: UIViewController {
     
     var days:[String]!
     
+    var trainingvolumes = [TrainingVolume]()
+    
+    var test = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,13 +31,30 @@ class RecordViewController: UIViewController {
                  "16","17","18","19","20",
                  "21","22","23","24","25",
                  "26","27","28","29","30","31"]
-        let numbers = [12.0,23,34,42,13,
-                       23,41,19,45,24,
-                       33,11,22,4,23,
-                       1,2,3,4,5,
-                       6,7,8,9,10,
-                       5,4,6,2,7,
-                       12]
+//        let numbers = [12.0,23,34,42,13,
+//                       23,41,19,45,24,
+//                       33,11,22,4,23,
+//                       1,2,3,4,5,
+//                       6,7,8,9,10,
+//                       5,4,6,2,7,
+//                       12]
+        
+        var numbers = [Double]()
+        var i = 0
+        
+        
+        for _ in 0...30{
+            numbers.append(0)
+        }
+        
+        i = 0
+        for x in trainingvolumes{
+            
+            numbers[i]=Double(x.volume)
+            i+=1
+
+        }
+        
         
         setChart(days, values: numbers)
         
@@ -72,6 +94,14 @@ class RecordViewController: UIViewController {
         navigationController?.popViewControllerAnimated(true)
     }
    
+//    @IBAction func unwindToCharts(sender: UIStoryboardSegue){
+//        
+//        if let sourceViewController = sender.sourceViewController as? ViewController{
+//            trainingvolumes = sourceViewController.trainingvolumes
+//            print(trainingvolumes[0].volume)
+//        }
+//        
+//    }
 
     /*
     // MARK: - Navigation
